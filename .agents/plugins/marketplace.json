@@ -1,0 +1,12 @@
+{
+  "name": "delimit",
+  "interface": { "displayName": "Delimit" },
+  "plugins": [
+    {
+      "name": "delimit",
+      "source": { "source": "local", "path": "./plugins/delimit" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Developer Tools"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "delimit",
+  "version": "0.1.0",
+  "description": "Local Delimit memory, ledger, and handoff workflows for Codex."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "delimit": {
+      "type": "stdio",
+      "command": "sh",
+      "args": [
+        "-c",
+        "set -eu; root=${DELIMIT_HOME:-$HOME/.delimit}; server_dir=$root/server; server=$server_dir/ai/server.py; if [ ! -f \"$server\" ]; then server=$server_dir/mcp-server.py; fi; if [ ! -f \"$server\" ]; then echo 'Delimit MCP server missing; run delimit setup' >&2; exit 1; fi; py=$root/venv/bin/python; if [ ! -x \"$py\" ]; then py=python3; fi; export PYTHONPATH=$server_dir:$server_dir/ai; cd \"$server_dir\"; exec \"$py\" \"$server\""
+      ]
+    }
+  }
+}
